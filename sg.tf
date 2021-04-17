@@ -1,5 +1,5 @@
 resource "aws_security_group" "ec2-sg" {
-  name        = "${var.environment}-ec2-sg"
+  name        = "${var.environment}-${var.server}-ec2-sg"
   vpc_id      = "${var.vpc_id}"
 
   ingress {
@@ -25,6 +25,6 @@ resource "aws_security_group" "ec2-sg" {
   }
 
   tags = {
-    Name = "ec2-sg"
+    Name = "${var.client}-ec2-sg"
   }
 }
