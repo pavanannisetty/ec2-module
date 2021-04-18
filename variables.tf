@@ -6,3 +6,4 @@ variable "environment" {}
 variable "vpc_id" {}
 variable "client" {}
 variable "server" {}
+variable "security_group {}"
